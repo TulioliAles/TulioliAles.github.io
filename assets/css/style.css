@@ -1,0 +1,451 @@
+/*
+CSS comum para toda aplicação
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+header {
+    height: 100px;
+    background-color: #000;
+    color: #FFF;
+}
+.header {
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 100px;
+}
+.logoimg {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 60%;
+    background-color: #B28756;
+}
+.logoimg img {
+    padding: 9px;
+}
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+.menu ul,
+.menu li {
+    list-style: none;
+}
+.menu ul {
+    display: flex;
+}
+.menu li a {
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid #000;
+}
+.menu li a:hover,
+.menu .active a {
+    border-bottom: 5px solid #B28756;
+    color: #CCC;
+}
+button.slick-prev {
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 51px;
+    position: absolute;
+    z-index: 9;
+    background-color: transparent;
+    background-image: url('../images/seta_left.png');
+    top: 42%;
+    left: 10%;
+}
+button.slick-next {
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 51px;
+    position: absolute;
+    z-index: 19;
+    background-color: transparent;
+    background-image: url('../images/seta_right.png');
+    top: 42%;
+    right: 10%;
+}
+
+.banner .slides{
+    height: calc(100vh - 100px);
+    background-color: #333;
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+}
+.slick-dots li button {
+    font-size: 0px;
+    border: 2px solid #B28756;
+    width: 26px;
+    height: 26px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+li.slick-active button {
+    background: #B28756;
+}
+.slick-dots {
+    margin: 0 auto;
+    width: 50%;
+    position: absolute;
+    left: 45%;
+    top: 600px;
+}
+.slick-dots li {
+    padding-left: 10px;
+    display: inline-block;
+}
+.default {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+.default .section-title,
+.default .section-desc {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.default .section-title {
+    font-size: 20px;
+}
+.default .section-desc {
+    font-size: 12px;
+    color: #708090;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.default .section-body {
+    max-width: 1140px;
+    margin: auto;
+}
+.default.light {
+    background-color: #F7F7F7;
+}
+.default.light .section-title,
+.default.light .section-body{
+    color: #000;
+}
+.default.dark {
+    background-color: #000;
+}
+.default.dark .section-title,
+.default.dark .section-body {
+    color: #FFF;
+}
+
+footer {
+    background-color:#000;
+    padding:20px;
+}
+.footer--area {
+    max-width:1140px;
+    margin:auto;
+    color:#FFF;
+    display:flex;
+}
+.footer--item {
+    flex:1;
+}
+.footer--item.area {
+    color:#999;
+    line-height:20px;
+    font-size:14px;
+    padding:0 10px 10px 10px;
+    text-align: center;
+}
+
+/*
+CSS das seções específicas
+*/
+
+.section-aboutus {
+    display: flex;
+}
+.section-aboutus--left {
+    flex: 1;
+}
+.section-aboutus--left .paragraph-title {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.section-aboutus--left .paragraph{
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 17px;
+}
+.section-aboutus--right {
+    width: 500 px;
+    text-align: center;
+    margin-left: 25px;
+}
+.section-aboutus--right img {
+    width: 450 px;
+    box-shadow: 0px 5px 10px #333;
+    margin-left: 10px;
+}
+
+
+.section-services {
+    display: flex;
+}
+.section-service {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 15px;
+}
+.section-service:first-child {
+    border-left: 1px solid #333;
+}
+.section-service h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.section-service p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
+}
+.section-body {
+    width: 1280px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.section-body .desc {
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #B28756;
+}
+.caixa-min {
+    width: 450px;
+    text-align: center;
+    padding: 10px;
+}
+.section-contact {
+    max-width:450px;
+    margin:auto;
+    text-align:center;
+}
+
+
+
+@media (min-width:450px) and (max-width:800px) {
+    .logo {
+        margin-left:30px;
+    }
+    .menu-opener {
+        display:block;
+        width:45px;
+        margin-right:30px;
+    }
+    nav {
+        display:none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+    .menu ul {
+        flex-direction:column;
+    }
+
+    .menu li a {
+        font-weight:bold;
+        height:80px;
+        font-size:27px;
+        margin-left:50px;
+        border:0;
+    }
+    .menu li.active a {
+        border:0;
+        color:#B28756;
+    }
+
+
+    .section-aboutus {
+        flex-direction:column;
+    }
+    .section-aboutus--left {
+        margin-left:30px;
+        margin-right:30px;
+        margin-bottom:30px;
+    }
+
+    .section-aboutus--right {
+        width:auto;
+    }
+
+    .section-services {
+        flex-wrap:wrap;
+    }
+    .section-service {
+        min-width:50%;
+        margin-bottom:30px;
+    }
+    .section-service:first-child {
+        border-left:0;
+    }
+
+    .section-team {
+        max-width:580px;
+    }
+
+    .section-price {
+        flex-wrap:wrap;
+    }
+    .section-price--item {
+        margin-left:20px;
+        min-width:calc(50% - 40px);
+        margin-bottom:20px;
+    }
+    .section-price--item:last-child {
+        margin-right:20px;
+    }
+
+    .section-facts {
+        flex-wrap:wrap;
+    }
+    .section-fact {
+        min-width:50%;
+    }
+
+
+    .section-map {
+        padding-left:30px;
+        padding-right:30px;
+    }
+    .section-map--area {
+        width:auto;
+    }
+    .section-map--info {
+        width:auto;
+    }
+    .section-map--info-item {
+        margin-bottom:20px;
+    }
+    .section-map--info-item:last-child {
+        margin-bottom:0;
+    }
+}
+
+
+@media (max-width:450px) {
+    .logo {
+        margin-left:30px;
+    }
+    nav {
+        display:none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 80vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+    .menu ul {
+        flex-direction:column;
+    }
+
+    .menu li a {
+        font-weight:bold;
+        height:60px;
+        font-size:20px;
+        margin-left:30px;
+        border:0;
+    }
+    .menu li.active a {
+        border:0;
+        color:#B28756;
+    }
+
+    .banner h1 {
+        font-size:30px;
+    }
+    .banner h2 {
+        font-size:17px;
+    }
+
+
+    .section-aboutus {
+        flex-direction:column;
+    }
+    .section-aboutus--left {
+        margin-left:30px;
+        margin-right:30px;
+        margin-bottom:30px;
+    }
+
+    .section-aboutus--right {
+        width:auto;
+        margin-left:30px;
+        margin-right:30px;
+    }
+    .section-aboutus--right img {
+        width:100%;
+    }
+
+    .section-services {
+        flex-wrap:wrap;
+    }
+    .section-service {
+        min-width:100%;
+        margin-bottom:30px;
+    }
+    .section-service:first-child {
+        border-left:0;
+    }
+
+    .section-projects--photo {
+        width:320px;
+    }
+    .section-projects--photoarea {
+        width:300px;
+        height:190px;
+    }
+    .section-contact {
+        max-width:100vw;
+        margin-left:20px;
+        margin-right:20px;
+    }
+    .footer--area {
+        flex-direction:column;
+    }
+    .footer--item {
+        margin-bottom:20px;
+    }    
+}
